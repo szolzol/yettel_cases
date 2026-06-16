@@ -2161,53 +2161,229 @@ html {
   }
 }
 
+/* ----------------------------------------------------------
+   Desktop Defaults for Compact Toggles (Hidden on Desktop)
+   ---------------------------------------------------------- */
+.compact-toggle-btn {
+  display: none;
+}
+.compact-toggle-content {
+  display: block;
+}
+.exec-summary-header {
+  display: none;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE: Mobile (max-width: 600px)
+   ---------------------------------------------------------- */
 @media (max-width: 600px) {
+  /* Core Layout Adjustments */
+  .slide {
+    padding: 12px 12px;
+    height: calc(100vh - 48px);
+    overflow-y: auto;
+  }
+  .slide__content {
+    overflow: visible;
+    height: auto;
+  }
+  .slide__header {
+    margin-bottom: 8px;
+    gap: 4px;
+  }
   .slide__title {
-    font-size: 22px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .slide__subtitle {
+    font-size: 12px;
   }
 
+  /* Compact Toggle System */
+  .compact-toggle-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+    flex-shrink: 0;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .compact-toggle-btn:active {
+    background: rgba(255,255,255,0.2);
+  }
+  .compact-toggle-content {
+    display: none;
+    margin-top: 8px;
+  }
+  .compact-toggle-content.expanded {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  /* Slide 0 - Hero */
   .hero__title {
-    font-size: 32px;
+    font-size: 26px;
     letter-spacing: -1px;
   }
-
+  .hero__tagline {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
   .hero__pillars-preview {
     grid-template-columns: 1fr;
-    max-width: 280px;
+    max-width: 100%;
+    gap: 8px;
+  }
+  .hero__pillar-card {
+    position: relative;
+    padding: 10px 40px 10px 12px;
+  }
+  .hero__pillar-card-title {
+    font-size: 14px;
+    margin: 0;
+  }
+  .hero__pillar-card .compact-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero__pillar-card.expanded .compact-toggle-btn {
+    top: 24px; /* Move up when expanded */
   }
 
-  .nav__dot {
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
+  /* Executive Summaries */
+  .slide__exec-summary {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px 12px;
+    margin-bottom: 12px;
   }
-
-  .nav__label {
-    display: none;
-  }
-
-  .roi-cards {
+  
+  /* Slide 1 - Customer Ops */
+  .slide__split {
     grid-template-columns: 1fr;
+    gap: 12px;
+    overflow: visible;
+    height: auto;
   }
-
-  .roi-totals {
-    grid-template-columns: 1fr;
+  .chat-demo {
+    max-height: none;
   }
-
+  .chat__messages {
+    min-height: 120px;
+  }
   .kpi-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .kpi-card {
+    padding: 10px;
+  }
+  .kpi-card__delta {
+    font-size: 16px;
   }
 
-  .scorecard__sliders {
-    grid-template-columns: 1fr;
+  /* Slide 2 - Dev Productivity */
+  .slide__stack {
+    overflow: visible;
+    height: auto;
   }
-
   .pipeline__flow {
     flex-wrap: wrap;
     gap: 8px;
   }
-
   .pipeline__connector {
+    display: none;
+  }
+  /* Governance Matrix container */
+  .governance-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+  .governance__matrix table {
+    width: 500px; /* Force width to enable horizontal scroll */
+    font-size: 11px;
+  }
+
+  /* Slide 3 - In-House Build */
+  .candidates {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .candidate-card {
+    padding: 12px;
+    position: relative;
+  }
+  .candidate-card .compact-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .candidate-card__name {
+    padding-right: 32px;
+  }
+
+  /* Slide 4 - Vendors */
+  .slide--p4 .slide__content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    overflow: visible;
+    height: auto;
+  }
+  .vendor-card {
+    padding: 12px;
+    position: relative;
+  }
+  .vendor-card .compact-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .vendor-card__name {
+    padding-right: 32px;
+  }
+  .vendor-card__row {
+    font-size: 11px;
+  }
+
+  /* Slide 5 - ROI */
+  .roi-cards {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .roi-totals {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  /* Navigation overrides */
+  .nav {
+    height: 48px;
+    padding: 0 8px;
+  }
+  .nav__dot {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+  .nav__label {
     display: none;
   }
 }

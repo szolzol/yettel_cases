@@ -856,6 +856,33 @@
     }
   }
 
+  // ----------------------------------------------------------
+  // 12. MOBILE COMPACT TOGGLES
+  // ----------------------------------------------------------
+  var compactToggles = document.querySelectorAll('.compact-toggle-btn');
+  compactToggles.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var container = btn.closest('.hero__pillar-card, .exec-summary-wrapper, .candidate-card, .roadmap, .vendor-card');
+      if (!container) return;
+      
+      var content = container.querySelector('.compact-toggle-content');
+      if (content) {
+        var isExpanded = content.classList.contains('expanded');
+        
+        if (isExpanded) {
+          content.classList.remove('expanded');
+          container.classList.remove('expanded');
+          btn.textContent = '+';
+        } else {
+          content.classList.add('expanded');
+          container.classList.add('expanded');
+          btn.textContent = '−';
+        }
+      }
+    });
+  });
+
   // Kick off initial slide
   onSlideEnter(0);
 
