@@ -362,6 +362,23 @@ html {
 /* ----------------------------------------------------------
    6. Slide 0 — Hero
    ---------------------------------------------------------- */
+.mock-ribbon {
+  position: absolute;
+  top: 32px;
+  right: -50px;
+  background: var(--yettel-green);
+  color: var(--bg-dark);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 60px;
+  transform: rotate(45deg);
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
 .slide--hero {
   justify-content: center;
   align-items: center;
