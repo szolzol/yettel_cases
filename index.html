@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yettel AI Director — A practical, production-ready AI strategy across four strategic pillars: customer operations, developer productivity, in-house AI builds, and vendor adoption.">
+  <meta name="description"
+    content="Yettel AI Director — A practical, production-ready AI strategy across four strategic pillars: customer operations, developer productivity, in-house AI builds, and vendor adoption.">
   <title>Yettel AI Director — Strategic AI Roadmap</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <div class="presentation">
@@ -23,37 +28,42 @@
 
       <div class="slide__content">
         <div class="hero__logo">
-          <img src="Yettellimelogo.svg.png" alt="Yettel" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 24px;">
+          <img src="Yettellimelogo.svg.png" alt="Yettel"
+            style="height: 60px; width: auto; object-fit: contain; margin-bottom: 24px;">
         </div>
 
-        <p class="hero__subtitle">Strategic AI Roadmap</p>
-        <p class="hero__tagline">Practical, production-ready AI strategy across four strategic pillars</p>
+        <p class="hero__subtitle">Strategic AI Pillars for</p>
+        <p class="hero__tagline">AI strategic initiatives across four strategic pillars</p>
 
         <div class="hero__pillars-preview">
           <div class="hero__pillar-card" data-pillar="1">
             <span class="hero__pillar-card-number">01</span>
-            <span class="hero__pillar-card-title">AI-Augmented Customer Operations</span><button class="compact-toggle-btn">+</button>
+            <span class="hero__pillar-card-title">AI-Augmented Customer Operations</span><button
+              class="compact-toggle-btn">+</button>
             <div class="compact-toggle-content">
               <div class="hero__pillar-brief" id="pillar-brief-1"></div>
             </div>
           </div>
           <div class="hero__pillar-card" data-pillar="2">
             <span class="hero__pillar-card-number">02</span>
-            <span class="hero__pillar-card-title">Developer Productivity &amp; Rapid Delivery</span><button class="compact-toggle-btn">+</button>
+            <span class="hero__pillar-card-title">Developer Productivity &amp; Rapid Delivery</span><button
+              class="compact-toggle-btn">+</button>
             <div class="compact-toggle-content">
               <div class="hero__pillar-brief" id="pillar-brief-2"></div>
             </div>
           </div>
           <div class="hero__pillar-card" data-pillar="3">
             <span class="hero__pillar-card-number">03</span>
-            <span class="hero__pillar-card-title">In-House AI Build</span><button class="compact-toggle-btn">+</button>
+            <span class="hero__pillar-card-title">Develop In-House AI Build</span><button
+              class="compact-toggle-btn">+</button>
             <div class="compact-toggle-content">
               <div class="hero__pillar-brief" id="pillar-brief-3"></div>
             </div>
           </div>
           <div class="hero__pillar-card" data-pillar="4">
             <span class="hero__pillar-card-number">04</span>
-            <span class="hero__pillar-card-title">Vendor/Partner Adoption</span><button class="compact-toggle-btn">+</button>
+            <span class="hero__pillar-card-title">Vendor/Partner Adoption</span><button
+              class="compact-toggle-btn">+</button>
             <div class="compact-toggle-content">
               <div class="hero__pillar-brief" id="pillar-brief-4"></div>
             </div>
@@ -73,11 +83,15 @@
       </header>
 
       <div class="exec-summary-wrapper">
-        <div class="exec-summary-header" style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
+        <div class="exec-summary-header"
+          style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
           Executive Summary <button class="compact-toggle-btn">+</button>
         </div>
         <div class="compact-toggle-content">
-          <p class="slide__exec-summary"><strong>Short-term:</strong> deploy an intent-routing agent across the top 4 contact drivers — billing, outage, churn, and technical — to cut average handle time by 30% within 6 months.<br><strong>Long-term:</strong> build a closed-loop system where every resolved ticket retrains the routing model, reducing resolution costs and steadily increasing ROI to 250% by Year 2.</p>
+          <p class="slide__exec-summary"><strong>Short-term:</strong> deploy an intent-routing agent across the top 4
+            contact drivers — billing, outage, churn, and technical — to cut average handle time by 30% within 6
+            months.<br><strong>Long-term:</strong> build a closed-loop system where all automatically answerable
+            interactions are handled by AI, reducing resolution costs and steadily increasing ROI to 250% by Year 2.</p>
         </div>
       </div>
 
@@ -93,7 +107,8 @@
 
             <div class="chat__messages" id="chat-messages">
               <div class="chat__message chat__message--system">
-                Hello! I'm Yettel's AI assistant. How can I help you today? Choose a scenario below or type your message.
+                Hello! I'm Yettel's AI assistant. How can I help you today? Choose a scenario below or type your
+                message.
               </div>
             </div>
 
@@ -108,7 +123,11 @@
             <div class="chat__input-area">
               <input type="text" id="chat-input" placeholder="Type a customer message...">
               <button id="chat-send" aria-label="Send message">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
               </button>
             </div>
           </div>
@@ -180,7 +199,7 @@
                 <span class="kpi-slider__value" id="slider-adoption-value">100%</span>
               </div>
               <div class="kpi-slider" data-slider="augmentation">
-                <label class="kpi-slider__label" for="slider-augmentation">Agent Augmentation Level</label>
+                <label class="kpi-slider__label" for="slider-augmentation">Agent Handling Rate</label>
                 <input class="kpi-slider__input" type="range" min="0" max="100" value="100" id="slider-augmentation">
                 <span class="kpi-slider__value" id="slider-augmentation-value">100%</span>
               </div>
@@ -202,11 +221,16 @@
       </header>
 
       <div class="exec-summary-wrapper">
-        <div class="exec-summary-header" style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
+        <div class="exec-summary-header"
+          style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
           Executive Summary <button class="compact-toggle-btn">+</button>
         </div>
         <div class="compact-toggle-content">
-          <p class="slide__exec-summary"><strong>Short-term:</strong> embed AI code review into the existing GitLab/Jenkins pipeline to reduce average cycle time from 4.2 days to 3.1 days — a realistic 25% productivity gain measurable within the first sprint.<br><strong>Long-term:</strong> layer on graduated governance tiers so AI autonomy scales with developer seniority, mitigating the 'Copilot Paradox' of bloated PR reviews while maintaining IP control.</p>
+          <p class="slide__exec-summary"><strong>Short-term:</strong> embed AI code review into the existing
+            Jenkins pipeline to reduce average cycle time from 4.2 days to 3.1 days — a realistic 25%
+            productivity gain.<br><strong>Long-term:</strong> layer on graduated
+            governance tiers so AI autonomy scales with developer seniority, mitigating the 'Copilot Paradox' of bloated
+            reviews while maintaining IP control.</p>
         </div>
       </div>
 
@@ -219,27 +243,48 @@
 
             <div class="pipeline__flow">
               <button class="pipeline__stage active" data-stage="commit">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4" />
+                  <line x1="1.05" y1="12" x2="7" y2="12" />
+                  <line x1="17.01" y1="12" x2="22.96" y2="12" />
+                </svg>
                 <span>Code Commit</span>
               </button>
               <span class="pipeline__connector">→</span>
               <button class="pipeline__stage" data-stage="review">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
                 <span>AI Review</span>
               </button>
               <span class="pipeline__connector">→</span>
               <button class="pipeline__stage" data-stage="suggest">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
                 <span>Suggestions</span>
               </button>
               <span class="pipeline__connector">→</span>
               <button class="pipeline__stage" data-stage="fix">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                </svg>
                 <span>Auto-Fix</span>
               </button>
               <span class="pipeline__connector">→</span>
               <button class="pipeline__stage" data-stage="merge">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 009 9"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="18" r="3" />
+                  <circle cx="6" cy="6" r="3" />
+                  <path d="M6 21V9a9 9 0 009 9" />
+                </svg>
                 <span>Merge</span>
               </button>
             </div>
@@ -277,31 +322,47 @@
                   <tbody>
                     <tr>
                       <td>Intern</td>
-                      <td><span class="governance__cell" data-tier="intern" data-capability="codegen" data-level="blocked">Blocked</span></td>
-                      <td><span class="governance__cell" data-tier="intern" data-capability="automerge" data-level="blocked">Blocked</span></td>
-                      <td><span class="governance__cell" data-tier="intern" data-capability="proddeploy" data-level="blocked">Blocked</span></td>
-                      <td><span class="governance__cell" data-tier="intern" data-capability="modeltune" data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="intern" data-capability="codegen"
+                          data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="intern" data-capability="automerge"
+                          data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="intern" data-capability="proddeploy"
+                          data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="intern" data-capability="modeltune"
+                          data-level="blocked">Blocked</span></td>
                     </tr>
                     <tr>
                       <td>Junior</td>
-                      <td><span class="governance__cell" data-tier="junior" data-capability="codegen" data-level="restricted">Restricted</span></td>
-                      <td><span class="governance__cell" data-tier="junior" data-capability="automerge" data-level="blocked">Blocked</span></td>
-                      <td><span class="governance__cell" data-tier="junior" data-capability="proddeploy" data-level="blocked">Blocked</span></td>
-                      <td><span class="governance__cell" data-tier="junior" data-capability="modeltune" data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="junior" data-capability="codegen"
+                          data-level="restricted">Restricted</span></td>
+                      <td><span class="governance__cell" data-tier="junior" data-capability="automerge"
+                          data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="junior" data-capability="proddeploy"
+                          data-level="blocked">Blocked</span></td>
+                      <td><span class="governance__cell" data-tier="junior" data-capability="modeltune"
+                          data-level="blocked">Blocked</span></td>
                     </tr>
                     <tr>
                       <td>Senior</td>
-                      <td><span class="governance__cell" data-tier="senior" data-capability="codegen" data-level="allowed">Allowed</span></td>
-                      <td><span class="governance__cell" data-tier="senior" data-capability="automerge" data-level="restricted">Restricted</span></td>
-                      <td><span class="governance__cell" data-tier="senior" data-capability="proddeploy" data-level="allowed">Allowed</span></td>
-                      <td><span class="governance__cell" data-tier="senior" data-capability="modeltune" data-level="restricted">Restricted</span></td>
+                      <td><span class="governance__cell" data-tier="senior" data-capability="codegen"
+                          data-level="allowed">Allowed</span></td>
+                      <td><span class="governance__cell" data-tier="senior" data-capability="automerge"
+                          data-level="restricted">Restricted</span></td>
+                      <td><span class="governance__cell" data-tier="senior" data-capability="proddeploy"
+                          data-level="allowed">Allowed</span></td>
+                      <td><span class="governance__cell" data-tier="senior" data-capability="modeltune"
+                          data-level="restricted">Restricted</span></td>
                     </tr>
                     <tr>
                       <td>Lead</td>
-                      <td><span class="governance__cell" data-tier="lead" data-capability="codegen" data-level="full">Full</span></td>
-                      <td><span class="governance__cell" data-tier="lead" data-capability="automerge" data-level="full">Full</span></td>
-                      <td><span class="governance__cell" data-tier="lead" data-capability="proddeploy" data-level="full">Full</span></td>
-                      <td><span class="governance__cell" data-tier="lead" data-capability="modeltune" data-level="full">Full</span></td>
+                      <td><span class="governance__cell" data-tier="lead" data-capability="codegen"
+                          data-level="full">Full</span></td>
+                      <td><span class="governance__cell" data-tier="lead" data-capability="automerge"
+                          data-level="full">Full</span></td>
+                      <td><span class="governance__cell" data-tier="lead" data-capability="proddeploy"
+                          data-level="full">Full</span></td>
+                      <td><span class="governance__cell" data-tier="lead" data-capability="modeltune"
+                          data-level="full">Full</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -314,7 +375,8 @@
                   <span>📋 IP Ownership</span>
                 </button>
                 <div class="governance__panel-content">
-                  All AI-generated code is owned by Yettel. Models trained on proprietary data remain company assets. Third-party model outputs require license review before production use.
+                  All AI-generated code is owned by Yettel. Models trained on proprietary data remain company assets.
+                  Third-party model outputs require license review before production use.
                 </div>
               </div>
               <div class="governance__panel" data-panel="hallucination">
@@ -322,7 +384,8 @@
                   <span>⚠️ Hallucination Risk</span>
                 </button>
                 <div class="governance__panel-content">
-                  Traffic light risk assessment: 🟢 Low risk for boilerplate/tests, 🟡 Medium risk for business logic, 🔴 High risk for security-critical code. All AI suggestions require human review before merge.
+                  Traffic light risk assessment: 🟢 Low risk for boilerplate/tests, 🟡 Medium risk for business logic,
+                  🔴 High risk for security-critical code. All AI suggestions require human review before merge.
                 </div>
               </div>
             </div>
@@ -343,11 +406,16 @@
       </header>
 
       <div class="exec-summary-wrapper">
-        <div class="exec-summary-header" style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
+        <div class="exec-summary-header"
+          style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
           Executive Summary <button class="compact-toggle-btn">+</button>
         </div>
         <div class="compact-toggle-content">
-          <p class="slide__exec-summary"><strong>Short-term:</strong> run a 2-month discovery sprint on the Dynamic Pricing Engine to validate data readiness and model architecture against Yettel's billing and usage datasets.<br><strong>Long-term:</strong> this is Yettel's most strategic internal build at €3.6M/yr value — own the pricing intelligence layer end-to-end so competitive advantage compounds with every quarter of customer behavior data collected.</p>
+          <p class="slide__exec-summary"><strong>Short-term:</strong> run a 2-month discovery sprint on the Dynamic
+            Pricing Engine to validate data readiness and model architecture against Yettel's billing and usage
+            datasets.<br><strong>Long-term:</strong> this is Yettel's most strategic internal build at €3.6M/yr value —
+            own the pricing intelligence layer end-to-end so competitive advantage compounds with every quarter of
+            customer behavior data collected.</p>
         </div>
       </div>
 
@@ -358,9 +426,11 @@
           <div class="candidates">
             <div class="candidate-card" data-candidate="anomaly">
               <div class="candidate-card__icon">🔍</div>
-              <h4 class="candidate-card__name">Network Anomaly Detection</h4><button class="compact-toggle-btn">+</button>
+              <h4 class="candidate-card__name">Network Anomaly Detection</h4><button
+                class="compact-toggle-btn">+</button>
               <div class="compact-toggle-content">
-                <p class="candidate-card__desc">Real-time detection of network anomalies using proprietary telemetry data. Reduces MTTR and prevents outages.</p>
+                <p class="candidate-card__desc">Real-time detection of network anomalies using proprietary telemetry
+                  data. Reduces MTTR and prevents outages.</p>
                 <div class="candidate-card__stats">
                   <span>Data Moat: <strong>High</strong></span>
                   <span>ROI: <strong>€4.2M/yr</strong></span>
@@ -374,7 +444,8 @@
               <div class="candidate-card__icon">💰</div>
               <h4 class="candidate-card__name">Dynamic Pricing Engine</h4><button class="compact-toggle-btn">+</button>
               <div class="compact-toggle-content">
-                <p class="candidate-card__desc">AI-driven price optimization across plans, bundles, and promotions using usage patterns and elasticity models.</p>
+                <p class="candidate-card__desc">AI-driven price optimization across plans, bundles, and promotions using
+                  usage patterns and elasticity models.</p>
                 <div class="candidate-card__stats">
                   <span>Data Moat: <strong>Medium</strong></span>
                   <span>ROI: <strong>€3.6M/yr</strong></span>
@@ -385,9 +456,11 @@
 
             <div class="candidate-card" data-candidate="clv">
               <div class="candidate-card__icon">👤</div>
-              <h4 class="candidate-card__name">Customer Lifetime Value Model</h4><button class="compact-toggle-btn">+</button>
+              <h4 class="candidate-card__name">Customer Lifetime Value Model</h4><button
+                class="compact-toggle-btn">+</button>
               <div class="compact-toggle-content">
-                <p class="candidate-card__desc">Predictive CLV scoring for targeted retention and upsell. Integrates with CRM for personalized engagement.</p>
+                <p class="candidate-card__desc">Predictive CLV scoring for targeted retention and upsell. Integrates
+                  with CRM for personalized engagement.</p>
                 <div class="candidate-card__stats">
                   <span>Data Moat: <strong>Low</strong></span>
                   <span>ROI: <strong>€3.1M/yr</strong></span>
@@ -398,9 +471,11 @@
 
             <div class="candidate-card" data-candidate="b2b-m2m">
               <div class="candidate-card__icon">📡</div>
-              <h4 class="candidate-card__name">B2B M2M Predictive Diagnostics</h4><button class="compact-toggle-btn">+</button>
+              <h4 class="candidate-card__name">B2B M2M Predictive Diagnostics</h4><button
+                class="compact-toggle-btn">+</button>
               <div class="compact-toggle-content">
-                <p class="candidate-card__desc">AI-driven anomaly detection and predictive maintenance for enterprise IoT/M2M fleets. Empowers B2B clients to monitor device health.</p>
+                <p class="candidate-card__desc">AI-driven anomaly detection and predictive maintenance for enterprise
+                  IoT/M2M fleets. Empowers B2B clients to monitor device health.</p>
                 <div class="candidate-card__stats">
                   <span>Data Moat: <strong>High</strong></span>
                   <span>ROI: <strong>€2.8M/yr</strong></span>
@@ -418,7 +493,7 @@
               Dynamic Pricing Engine — 12-Month Build Roadmap
               <button class="compact-toggle-btn">+</button>
             </h3>
-            
+
             <div class="compact-toggle-content">
               <div class="roadmap__timeline">
                 <div class="roadmap__month-markers">
@@ -493,11 +568,15 @@
       </header>
 
       <div class="exec-summary-wrapper">
-        <div class="exec-summary-header" style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
+        <div class="exec-summary-header"
+          style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
           Executive Summary <button class="compact-toggle-btn">+</button>
         </div>
         <div class="compact-toggle-content">
-          <p class="slide__exec-summary"><strong>Short-term:</strong> procure Fraud Detection SaaS to stop revenue leakage within 6-8 weeks — this is commodity capability where speed-to-value beats internal build economics by 10x.<br><strong>Long-term:</strong> structure every vendor contract with 12-month exit windows and data portability clauses so Yettel retains optionality to in-source when internal ML capabilities mature.</p>
+          <p class="slide__exec-summary"><strong>Short-term:</strong> procure Fraud Detection SaaS to stop revenue
+            leakage within 6-8 weeks — this is commodity capability where speed-to-value beats internal build economics
+            by 10x.<br><strong>Long-term:</strong> structure every vendor contract with 12-month exit windows and data
+            portability clauses so Yettel retains optionality to in-source when internal ML capabilities mature.</p>
         </div>
       </div>
 
@@ -507,17 +586,30 @@
         <div class="vendors">
           <div class="vendor-card" data-vendor="scheduling">
             <div class="vendor-card__icon">📅</div>
-            <h4 class="vendor-card__name">AI Field Workforce Scheduling</h4><button class="compact-toggle-btn">+</button>
-            <p class="vendor-card__desc">Optimize technician dispatching, route planning, and SLA compliance using AI-driven scheduling.</p>
+            <h4 class="vendor-card__name">AI Field Workforce Scheduling</h4><button
+              class="compact-toggle-btn">+</button>
+            <p class="vendor-card__desc">Optimize technician dispatching, route planning, and SLA compliance using
+              AI-driven scheduling.</p>
             <div class="compact-toggle-content">
               <div class="vendor-card__detail">
-                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>ServiceMax (Salesforce-native, asset-centric) · OverIT (GIS + AR, telco-specific) · Zinier (no-code, AI-first)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>SaaS (all three), custom enterprise pricing</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€400K–600K/yr (licensing + integration)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>3–4 months (Zinier) to 6–12 months (ServiceMax)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>OverIT leads on GIS/AR for infrastructure-heavy field ops; Zinier leads on speed-to-deploy with no-code workflows</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>OverIT has strong CEE presence (Italian HQ). ServiceMax and Zinier rely on global SI partners for Hungary.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Medium — requires integration with existing dispatch/ERP systems. Offline mobile capability critical for field crews.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted
+                    Vendors</span><span>ServiceMax (Salesforce-native, asset-centric) · OverIT (GIS + AR,
+                    telco-specific) · Zinier (no-code, AI-first)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>SaaS (all
+                    three), custom enterprise pricing</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual
+                    Cost</span><span>€400K–600K/yr (licensing + integration)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>3–4 months
+                    (Zinier) to 6–12 months (ServiceMax)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>OverIT
+                    leads on GIS/AR for infrastructure-heavy field ops; Zinier leads on speed-to-deploy with no-code
+                    workflows</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>OverIT has
+                    strong CEE presence (Italian HQ). ServiceMax and Zinier rely on global SI partners for
+                    Hungary.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Medium —
+                    requires integration with existing dispatch/ERP systems. Offline mobile capability critical for
+                    field crews.</span></div>
               </div>
             </div>
           </div>
@@ -526,16 +618,30 @@
             <div class="vendor-card__badge">★ RECOMMENDED</div>
             <div class="vendor-card__icon">🛡️</div>
             <h4 class="vendor-card__name">Fraud Detection SaaS</h4><button class="compact-toggle-btn">+</button>
-            <p class="vendor-card__desc">Real-time fraud detection across SIM swap, subscription fraud, IRSF, and revenue assurance.</p>
+            <p class="vendor-card__desc">Real-time fraud detection across SIM swap, subscription fraud, IRSF, and
+              revenue assurance.</p>
             <div class="compact-toggle-content">
               <div class="vendor-card__detail">
-                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Subex HyperSense (AI-first, end-to-end FMS) · Mobileum AIP (voice/roaming/signaling focus) · NVIDIA Morpheus (GPU-accelerated custom build)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>Subex/Mobileum: SaaS with per-subscriber licensing · Morpheus: on-prem GPU infrastructure</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€300K–500K/yr (SaaS) · €800K–1.2M/yr (Morpheus incl. GPU infra + ML team)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>6–8 weeks (Subex/Mobileum turnkey) · 4–6 months (Morpheus custom build)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>Subex leads with 200+ pre-built telecom fraud rules and closed-loop automation. Mobileum strongest on voice/roaming fraud. Morpheus only if building proprietary real-time engine.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>Mobileum operates regional hubs with direct CEE support. Subex has European presence but relies on remote implementation.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Recommendation</span><span>Subex HyperSense — fastest time-to-value, deepest telecom domain coverage, SaaS model avoids GPU capex. Reserve Morpheus as Year 2 option if Yettel builds internal ML team.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Subex
+                    HyperSense (AI-first, end-to-end FMS) · Mobileum AIP (voice/roaming/signaling focus) · NVIDIA
+                    Morpheus (GPU-accelerated custom build)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Deployment
+                    Model</span><span>Subex/Mobileum: SaaS with per-subscriber licensing · Morpheus: on-prem GPU
+                    infrastructure</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual
+                    Cost</span><span>€300K–500K/yr (SaaS) · €800K–1.2M/yr (Morpheus incl. GPU infra + ML team)</span>
+                </div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>6–8 weeks
+                    (Subex/Mobileum turnkey) · 4–6 months (Morpheus custom build)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>Subex
+                    leads with 200+ pre-built telecom fraud rules and closed-loop automation. Mobileum strongest on
+                    voice/roaming fraud. Morpheus only if building proprietary real-time engine.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>Mobileum
+                    operates regional hubs with direct CEE support. Subex has European presence but relies on remote
+                    implementation.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Recommendation</span><span>Subex
+                    HyperSense — fastest time-to-value, deepest telecom domain coverage, SaaS model avoids GPU capex.
+                    Reserve Morpheus as Year 2 option if Yettel builds internal ML team.</span></div>
               </div>
             </div>
           </div>
@@ -543,16 +649,28 @@
           <div class="vendor-card" data-vendor="documents">
             <div class="vendor-card__icon">📄</div>
             <h4 class="vendor-card__name">Document Intelligence</h4><button class="compact-toggle-btn">+</button>
-            <p class="vendor-card__desc">AI-powered contract analysis, extraction, compliance checking, and document lifecycle management.</p>
+            <p class="vendor-card__desc">AI-powered contract analysis, extraction, compliance checking, and document
+              lifecycle management.</p>
             <div class="compact-toggle-content">
               <div class="vendor-card__detail">
-                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Tungsten Automation / Kofax (enterprise-grade, RPA integration) · ABBYY Vantage (best-in-class OCR, skill marketplace) · Sirion / Eigen (contract-focused, small-data AI)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>ABBYY: SaaS/on-prem/hybrid · Kofax: on-prem or cloud · Sirion: SaaS</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€150K–250K/yr (volume-based pricing, per page/document)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>4–6 weeks (ABBYY pre-built skills) to 6–12 weeks (Kofax custom workflows)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>ABBYY leads on OCR accuracy and multilingual support with human-in-the-loop learning. Kofax strongest for SAP-integrated, high-volume workflow orchestration.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>ABBYY has extensive dev/support centers in Eastern Europe (including Hungary/Serbia). Kofax has established enterprise partners in Budapest.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Low — mature market, well-understood ROI. Main risk is over-customization during implementation leading to vendor lock-in.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Tungsten
+                    Automation / Kofax (enterprise-grade, RPA integration) · ABBYY Vantage (best-in-class OCR, skill
+                    marketplace) · Sirion / Eigen (contract-focused, small-data AI)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>ABBYY:
+                    SaaS/on-prem/hybrid · Kofax: on-prem or cloud · Sirion: SaaS</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual
+                    Cost</span><span>€150K–250K/yr (volume-based pricing, per page/document)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>4–6 weeks
+                    (ABBYY pre-built skills) to 6–12 weeks (Kofax custom workflows)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>ABBYY
+                    leads on OCR accuracy and multilingual support with human-in-the-loop learning. Kofax strongest for
+                    SAP-integrated, high-volume workflow orchestration.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>ABBYY has
+                    extensive dev/support centers in Eastern Europe (including Hungary/Serbia). Kofax has established
+                    enterprise partners in Budapest.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Low — mature
+                    market, well-understood ROI. Main risk is over-customization during implementation leading to vendor
+                    lock-in.</span></div>
               </div>
             </div>
           </div>
@@ -560,16 +678,26 @@
           <div class="vendor-card" data-vendor="b2b-iot">
             <div class="vendor-card__icon">🌐</div>
             <h4 class="vendor-card__name">B2B IoT Analytics SaaS</h4><button class="compact-toggle-btn">+</button>
-            <p class="vendor-card__desc">AI platform for enterprise B2B customers to manage M2M SIM lifecycles, detect rogue devices, and optimize IoT data usage.</p>
+            <p class="vendor-card__desc">AI platform for enterprise B2B customers to manage M2M SIM lifecycles, detect
+              rogue devices, and optimize IoT data usage.</p>
             <div class="compact-toggle-content">
               <div class="vendor-card__detail">
-                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Cisco IoT Control Center · Ericsson IoT Accelerator · FloLive</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>SaaS (White-labeled for Yettel B2B clients)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€400K–600K/yr (Tiered by active M2M connections)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>3–6 months (API integration with Core Network)</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>Cisco leads in global enterprise standardization. FloLive offers highly agile, cloud-native global connectivity management.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>Cisco and Ericsson both have massive presence and dedicated integration teams in the CEE region.</span></div>
-                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Medium — High dependency on core network integration, but immediately monetizable as a premium B2B value-add.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Cisco IoT
+                    Control Center · Ericsson IoT Accelerator · FloLive</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>SaaS
+                    (White-labeled for Yettel B2B clients)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual
+                    Cost</span><span>€400K–600K/yr (Tiered by active M2M connections)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>3–6 months
+                    (API integration with Core Network)</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>Cisco
+                    leads in global enterprise standardization. FloLive offers highly agile, cloud-native global
+                    connectivity management.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>Cisco and
+                    Ericsson both have massive presence and dedicated integration teams in the CEE region.</span></div>
+                <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Medium — High
+                    dependency on core network integration, but immediately monetizable as a premium B2B
+                    value-add.</span></div>
               </div>
             </div>
           </div>
@@ -584,7 +712,9 @@
               <span>📋 IP Ownership Clauses</span>
             </div>
             <div class="negotiation__content">
-              Yettel retains ownership of all models trained on proprietary data. Vendor provides model explainability documentation. Source code escrow required for critical dependencies. Audit rights for AI decision-making processes.
+              Yettel retains ownership of all models trained on proprietary data. Vendor provides model explainability
+              documentation. Source code escrow required for critical dependencies. Audit rights for AI decision-making
+              processes.
             </div>
           </div>
 
@@ -593,7 +723,8 @@
               <span>🔐 Data-Sharing Terms</span>
             </div>
             <div class="negotiation__content">
-              Data residency within EU (GDPR compliance). No vendor use of Yettel data for model training without explicit consent. Data deletion upon contract termination within 30 days. Regular data access audits.
+              Data residency within EU (GDPR compliance). No vendor use of Yettel data for model training without
+              explicit consent. Data deletion upon contract termination within 30 days. Regular data access audits.
             </div>
           </div>
 
@@ -602,7 +733,9 @@
               <span>🚪 Exit &amp; Portability Clauses</span>
             </div>
             <div class="negotiation__content">
-              12-month maximum lock-in period. Full data export in standard formats within 60 days. Transition support for 6 months post-termination. No penalty for early exit after initial term. API compatibility guarantee for migration.
+              12-month maximum lock-in period. Full data export in standard formats within 60 days. Transition support
+              for 6 months post-termination. No penalty for early exit after initial term. API compatibility guarantee
+              for migration.
             </div>
           </div>
         </div>
@@ -621,11 +754,16 @@
       </header>
 
       <div class="exec-summary-wrapper">
-        <div class="exec-summary-header" style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
+        <div class="exec-summary-header"
+          style="display:flex; align-items:center; font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--text-secondary);">
           Executive Summary <button class="compact-toggle-btn">+</button>
         </div>
         <div class="compact-toggle-content">
-          <p class="slide__exec-summary">The four pillars generate €12.4M in annual value against a €3.7M total investment — a defensible 235% blended ROI with a blended payback of 11.5 months (including development and integration lead times). The strategy deliberately balances quick SaaS wins (fraud detection) with longer-term enterprise builds (pricing engine, automation flywheel) to ensure sustainable, realistic advantages without falling for vendor fairy tales.</p>
+          <p class="slide__exec-summary">The four pillars generate €12.4M in annual value against a €3.7M total
+            investment — a defensible 235% blended ROI with a blended payback of 11.5 months (including development and
+            integration lead times). The strategy deliberately balances quick SaaS wins (fraud detection) with
+            longer-term enterprise builds (pricing engine, automation flywheel) to ensure sustainable, realistic
+            advantages without falling for vendor fairy tales.</p>
         </div>
       </div>
 
@@ -737,4 +875,5 @@
   <!-- app.js must be loaded at the end -->
   <script src="app.js"></script>
 </body>
+
 </html>
