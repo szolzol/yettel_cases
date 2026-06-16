@@ -364,16 +364,18 @@ html {
    ---------------------------------------------------------- */
 .mock-ribbon {
   position: absolute;
-  top: 32px;
-  right: -50px;
+  top: 50px;
+  right: -60px;
+  width: 280px;
+  text-align: center;
   background: var(--yettel-green);
-  color: var(--bg-dark);
+  color: #000000;
   font-family: 'Outfit', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 8px 60px;
+  letter-spacing: 2px;
+  padding: 8px 0;
   transform: rotate(45deg);
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
