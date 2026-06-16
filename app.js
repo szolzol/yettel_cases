@@ -237,6 +237,15 @@
       routing: 'Routing to Technical Support L2',
       agent: { name: 'Alex T.', role: 'Technical Support Specialist', avatar: '🧑‍🔧' },
       context: 'Technical issue reported. Remote diagnostic results ready. Line quality metrics and recent speed test data loaded.'
+    },
+    porting: {
+      keywords: ['one', 'port', 'number', 'competitor', 'cheaper unlimited'],
+      label: 'Competitor Win-Back (One)',
+      confidence: 0.98,
+      response: 'I see you\'ve been with Yettel for 4 years. To keep you, I can instantly match One\'s price and give you 12 months of free 5G Max.',
+      routing: 'Routing to Specialized Win-Back Team',
+      agent: { name: 'Laszlo B.', role: 'Senior Win-Back Specialist', avatar: '🦸‍♂️' },
+      context: 'High-value churn risk to competitor One. CLV: €3,200. Pre-approved counter-offer matched against One\'s current campaign.'
     }
   };
 
@@ -244,7 +253,8 @@
     billing:   'I was overcharged on my last bill. There\'s a charge I don\'t recognize.',
     outage:    'My phone has had no signal since this morning. Is there an outage in my area?',
     churn:     'I want to cancel my contract. I found a better deal with another provider.',
-    technical: 'My internet has been really slow for the past few days. Pages take forever to load.'
+    technical: 'My internet has been really slow for the past few days. Pages take forever to load.',
+    porting:   'I want to port my number to One. They offered me a cheaper unlimited data plan.'
   };
 
   function addMessage(text, type) {
