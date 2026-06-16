@@ -90,7 +90,10 @@
     if (briefEl && pillarBriefs[pillarNum]) {
       briefEl.textContent = pillarBriefs[pillarNum];
     }
-
+    
+    card.addEventListener('click', function () {
+      goToSlide(pillarNum);
+    });
   });
 
   // ----------------------------------------------------------
