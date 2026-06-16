@@ -2180,13 +2180,19 @@ html {
 @media (max-width: 600px) {
   /* Core Layout Adjustments */
   .slide {
-    padding: 12px 12px;
-    height: calc(100vh - 48px);
+    padding: 12px 12px 80px 12px; /* Extra bottom padding to clear nav */
+    height: 100dvh;
     overflow-y: auto;
   }
   .slide__content {
     overflow: visible;
     height: auto;
+  }
+  /* Reset nested scroll containers for mobile */
+  .slide__left, .slide__right, .slide__top, .slide__bottom, .vendors, .negotiation {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
   }
   .slide__header {
     margin-bottom: 8px;
@@ -2363,6 +2369,9 @@ html {
   }
 
   /* Slide 5 - ROI */
+  .slide--roi .slide__content {
+    justify-content: flex-start;
+  }
   .roi-cards {
     grid-template-columns: 1fr;
     gap: 8px;
