@@ -1,5 +1,5 @@
 /* ============================================================
-   Yettel AI Director — Interactive Microsite
+   Telco AI Director — Interactive Microsite
    Pure vanilla JS • No dependencies • file:// compatible
    ============================================================ */
 
@@ -245,7 +245,7 @@
       keywords: ['one', 'port', 'number', 'competitor', 'cheaper unlimited'],
       label: 'Competitor Win-Back (One)',
       confidence: 0.98,
-      response: 'I see you\'ve been with Yettel for 4 years. To keep you, I can instantly match One\'s price and give you 12 months of free 5G Max.',
+      response: 'I see you\'ve been with Telco for 4 years. To keep you, I can instantly match One\'s price and give you 12 months of free 5G Max.',
       routing: 'Routing to Specialized Win-Back Team',
       agent: { name: 'Laszlo B.', role: 'Senior Win-Back Specialist', avatar: '🦸‍♂️' },
       context: 'High-value churn risk to competitor One. CLV: €3,200. Pre-approved counter-offer matched against One\'s current campaign.'

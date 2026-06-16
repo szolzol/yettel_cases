@@ -1,6 +1,6 @@
-# Yettel AI Director — Strategic AI Roadmap
+# Telco AI Director — Strategic AI Roadmap
 
-An interactive, data-driven presentation designed to pitch a practical, production-ready AI strategy for Yettel's telecommunications infrastructure.
+An interactive, data-driven presentation designed to pitch a practical, production-ready AI strategy for Telco's telecommunications infrastructure.
 
 This repository contains the full interactive presentation built specifically to address the core challenges of integrating AI across heterogeneous legacy environments, demonstrating value across four strategic pillars.
 
@@ -32,8 +32,8 @@ The presentation culminates in a comprehensive, mathematically sound **Investmen
 
 ## 🛠️ Technology Stack
 - **Architecture:** Zero-dependency, pure HTML5, CSS3, and Vanilla JavaScript.
-- **Styling:** Custom CSS grid layouts, CSS variable theming, and modern glassmorphic elements designed to reflect Yettel's brand guidelines.
+- **Styling:** Custom CSS grid layouts, CSS variable theming, and modern glassmorphic elements designed to reflect Telco's brand guidelines.
 - **Hosting:** Fully compatible with GitHub Pages for serverless, static delivery.
 
 ---
-*Built as a strategic interview assignment for the AI Director role at Yettel.*
+*Built as a strategic interview assignment for the AI Director role at Telco.*
