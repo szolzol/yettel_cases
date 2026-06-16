@@ -2180,7 +2180,7 @@ html {
 @media (max-width: 600px) {
   /* Core Layout Adjustments */
   .slide {
-    padding: 12px 12px 80px 12px; /* Extra bottom padding to clear nav */
+    padding: 12px 12px 140px 12px; /* Extra bottom padding to clear nav and sliders */
     height: 100dvh;
     overflow-y: auto;
   }
@@ -2305,6 +2305,8 @@ html {
 
   /* Slide 2 - Dev Productivity */
   .slide__stack {
+    display: flex;
+    flex-direction: column;
     overflow: visible;
     height: auto;
   }
@@ -2393,6 +2395,28 @@ html {
     font-size: 10px;
   }
   .nav__label {
+    display: none;
+  }
+
+  .creator-badge {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    color: var(--text-muted);
+    z-index: 101;
+    pointer-events: none;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    opacity: 0.6;
+  }
+}
+
+/* Fallback for desktop creator badge */
+@media (min-width: 601px) {
+  .creator-badge {
     display: none;
   }
 }
