@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yettel AI Director — A practical, production-ready AI strategy across four strategic pillars: customer operations, developer productivity, in-house AI builds, and vendor adoption.">
+  <title>Yettel AI Director — Strategic AI Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="presentation">
+
+    <!-- ========================================
+         SLIDE 0 — Hero
+         ======================================== -->
+    <section class="slide slide--hero active" data-slide="0">
+      <canvas id="hero-canvas"></canvas>
+
+      <div class="slide__content">
+        <div class="hero__logo">
+          <img src="Yettellimelogo.svg.png" alt="Yettel" style="height: 60px; width: auto; object-fit: contain; margin-bottom: 24px;">
+        </div>
+
+        <p class="hero__subtitle">Strategic AI Roadmap</p>
+        <p class="hero__tagline">Practical, production-ready AI strategy across four strategic pillars</p>
+
+        <div class="hero__pillars-preview">
+          <div class="hero__pillar-card" data-pillar="1">
+            <span class="hero__pillar-card-number">01</span>
+            <span class="hero__pillar-card-title">AI-Augmented Customer Operations</span>
+            <div class="hero__pillar-brief" id="pillar-brief-1"></div>
+          </div>
+          <div class="hero__pillar-card" data-pillar="2">
+            <span class="hero__pillar-card-number">02</span>
+            <span class="hero__pillar-card-title">Developer Productivity &amp; Rapid Delivery</span>
+            <div class="hero__pillar-brief" id="pillar-brief-2"></div>
+          </div>
+          <div class="hero__pillar-card" data-pillar="3">
+            <span class="hero__pillar-card-number">03</span>
+            <span class="hero__pillar-card-title">Strongest In-House AI Build</span>
+            <div class="hero__pillar-brief" id="pillar-brief-3"></div>
+          </div>
+          <div class="hero__pillar-card" data-pillar="4">
+            <span class="hero__pillar-card-number">04</span>
+            <span class="hero__pillar-card-title">Strongest Vendor/Partner Adoption</span>
+            <div class="hero__pillar-brief" id="pillar-brief-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SLIDE 1 — Pillar 1: AI-Augmented Customer Operations
+         ======================================== -->
+    <section class="slide slide--p1" data-slide="1">
+      <header class="slide__header">
+        <span class="slide__pillar-number">01</span>
+        <h2 class="slide__title">AI-Augmented Customer Operations</h2>
+        <p class="slide__subtitle">Intelligent routing, real-time intent classification, and agent augmentation</p>
+      </header>
+
+      <p class="slide__exec-summary"><strong>Short-term:</strong> deploy an intent-routing agent across the top 4 contact drivers — billing, outage, churn, and technical — to cut average handle time by 30% within 6 months.<br><strong>Long-term:</strong> build a closed-loop system where every resolved ticket retrains the routing model, reducing resolution costs and steadily increasing ROI to 250% by Year 2.</p>
+
+      <div class="slide__content slide__split">
+
+        <!-- LEFT COLUMN — Chat Demo -->
+        <div class="slide__left">
+          <div class="chat-demo">
+            <div class="chat-demo__header">
+              <span class="chat-demo__status-dot"></span>
+              <span>AI Contact Router</span>
+            </div>
+
+            <div class="chat__messages" id="chat-messages">
+              <div class="chat__message chat__message--system">
+                Hello! I'm Yettel's AI assistant. How can I help you today? Choose a scenario below or type your message.
+              </div>
+            </div>
+
+            <div class="chat__presets">
+              <button class="chat__preset" data-intent="billing">💳 Billing Dispute</button>
+              <button class="chat__preset" data-intent="outage">📡 Network Outage</button>
+              <button class="chat__preset" data-intent="churn">🚪 Cancel Service</button>
+              <button class="chat__preset" data-intent="technical">🐌 Slow Internet</button>
+            </div>
+
+            <div class="chat__input-area">
+              <input type="text" id="chat-input" placeholder="Type a customer message...">
+              <button id="chat-send" aria-label="Send message">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN — KPI Dashboard -->
+        <div class="slide__right">
+          <div class="kpi-dashboard">
+            <h3 class="kpi-dashboard__title">Impact Dashboard</h3>
+
+            <div class="kpi-cards">
+              <div class="kpi-card" data-kpi="aht">
+                <div class="kpi-card__label">Avg Handle Time</div>
+                <div class="kpi-card__baseline">
+                  <span class="kpi-card__baseline-label">Current</span>
+                  <span class="kpi-card__baseline-value">8.2 min</span>
+                </div>
+                <div class="kpi-card__projected">
+                  <span class="kpi-card__projected-label">Projected</span>
+                  <span class="kpi-card__projected-value">5.7 min</span>
+                </div>
+                <div class="kpi-card__delta">-30%</div>
+              </div>
+
+              <div class="kpi-card" data-kpi="fcr">
+                <div class="kpi-card__label">First Contact Resolution</div>
+                <div class="kpi-card__baseline">
+                  <span class="kpi-card__baseline-label">Current</span>
+                  <span class="kpi-card__baseline-value">68%</span>
+                </div>
+                <div class="kpi-card__projected">
+                  <span class="kpi-card__projected-label">Projected</span>
+                  <span class="kpi-card__projected-value">78%</span>
+                </div>
+                <div class="kpi-card__delta">+15%</div>
+              </div>
+
+              <div class="kpi-card" data-kpi="csat">
+                <div class="kpi-card__label">Customer Satisfaction</div>
+                <div class="kpi-card__baseline">
+                  <span class="kpi-card__baseline-label">Current</span>
+                  <span class="kpi-card__baseline-value">3.4/5</span>
+                </div>
+                <div class="kpi-card__projected">
+                  <span class="kpi-card__projected-label">Projected</span>
+                  <span class="kpi-card__projected-value">3.9/5</span>
+                </div>
+                <div class="kpi-card__delta">+15%</div>
+              </div>
+
+              <div class="kpi-card" data-kpi="deflection">
+                <div class="kpi-card__label">Agent Deflection Rate</div>
+                <div class="kpi-card__baseline">
+                  <span class="kpi-card__baseline-label">Current</span>
+                  <span class="kpi-card__baseline-value">12%</span>
+                </div>
+                <div class="kpi-card__projected">
+                  <span class="kpi-card__projected-label">Projected</span>
+                  <span class="kpi-card__projected-value">24%</span>
+                </div>
+                <div class="kpi-card__delta">+100%</div>
+              </div>
+            </div>
+
+            <div class="kpi-sliders">
+              <div class="kpi-slider" data-slider="adoption">
+                <label class="kpi-slider__label" for="slider-adoption">AI Adoption Rate</label>
+                <input class="kpi-slider__input" type="range" min="0" max="100" value="100" id="slider-adoption">
+                <span class="kpi-slider__value" id="slider-adoption-value">100%</span>
+              </div>
+              <div class="kpi-slider" data-slider="augmentation">
+                <label class="kpi-slider__label" for="slider-augmentation">Agent Augmentation Level</label>
+                <input class="kpi-slider__input" type="range" min="0" max="100" value="100" id="slider-augmentation">
+                <span class="kpi-slider__value" id="slider-augmentation-value">100%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SLIDE 2 — Pillar 2: Developer Productivity & Rapid Delivery
+         ======================================== -->
+    <section class="slide slide--p2" data-slide="2">
+      <header class="slide__header">
+        <span class="slide__pillar-number">02</span>
+        <h2 class="slide__title">Developer Productivity &amp; Rapid Delivery</h2>
+        <p class="slide__subtitle">AI-powered code review, automated pipelines, and governance frameworks</p>
+      </header>
+
+      <p class="slide__exec-summary"><strong>Short-term:</strong> embed AI code review into the existing GitLab/Jenkins pipeline to reduce average cycle time from 4.2 days to 3.1 days — a realistic 25% productivity gain measurable within the first sprint.<br><strong>Long-term:</strong> layer on graduated governance tiers so AI autonomy scales with developer seniority, mitigating the 'Copilot Paradox' of bloated PR reviews while maintaining IP control.</p>
+
+      <div class="slide__content slide__stack">
+
+        <!-- TOP — Pipeline -->
+        <div class="slide__top">
+          <div class="pipeline">
+            <h3 class="pipeline__title">AI-Assisted Code Review Pipeline</h3>
+
+            <div class="pipeline__flow">
+              <button class="pipeline__stage active" data-stage="commit">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+                <span>Code Commit</span>
+              </button>
+              <span class="pipeline__connector">→</span>
+              <button class="pipeline__stage" data-stage="review">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>AI Review</span>
+              </button>
+              <span class="pipeline__connector">→</span>
+              <button class="pipeline__stage" data-stage="suggest">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span>Suggestions</span>
+              </button>
+              <span class="pipeline__connector">→</span>
+              <button class="pipeline__stage" data-stage="fix">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                <span>Auto-Fix</span>
+              </button>
+              <span class="pipeline__connector">→</span>
+              <button class="pipeline__stage" data-stage="merge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 009 9"/></svg>
+                <span>Merge</span>
+              </button>
+            </div>
+
+            <div class="pipeline__detail" id="pipeline-detail">
+              <div class="pipeline__code-diff"></div>
+              <div class="pipeline__time-badge"></div>
+            </div>
+
+            <div class="pipeline__metrics">
+              <span class="pipeline__metric--before">Before: 4.2 days avg cycle time</span>
+              <span class="pipeline__metric--delta">25% reduction</span>
+              <span class="pipeline__metric--after">After: 3.1 days avg cycle time</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM — Governance -->
+        <div class="slide__bottom">
+          <div class="governance">
+            <h3 class="governance__title">Governance &amp; Access Control</h3>
+
+            <div class="governance__matrix">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Code Gen</th>
+                    <th>Auto-Merge</th>
+                    <th>Prod Deploy</th>
+                    <th>Model Tuning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Intern</td>
+                    <td><span class="governance__cell" data-tier="intern" data-capability="codegen" data-level="blocked">Blocked</span></td>
+                    <td><span class="governance__cell" data-tier="intern" data-capability="automerge" data-level="blocked">Blocked</span></td>
+                    <td><span class="governance__cell" data-tier="intern" data-capability="proddeploy" data-level="blocked">Blocked</span></td>
+                    <td><span class="governance__cell" data-tier="intern" data-capability="modeltune" data-level="blocked">Blocked</span></td>
+                  </tr>
+                  <tr>
+                    <td>Junior</td>
+                    <td><span class="governance__cell" data-tier="junior" data-capability="codegen" data-level="restricted">Restricted</span></td>
+                    <td><span class="governance__cell" data-tier="junior" data-capability="automerge" data-level="blocked">Blocked</span></td>
+                    <td><span class="governance__cell" data-tier="junior" data-capability="proddeploy" data-level="blocked">Blocked</span></td>
+                    <td><span class="governance__cell" data-tier="junior" data-capability="modeltune" data-level="blocked">Blocked</span></td>
+                  </tr>
+                  <tr>
+                    <td>Senior</td>
+                    <td><span class="governance__cell" data-tier="senior" data-capability="codegen" data-level="allowed">Allowed</span></td>
+                    <td><span class="governance__cell" data-tier="senior" data-capability="automerge" data-level="restricted">Restricted</span></td>
+                    <td><span class="governance__cell" data-tier="senior" data-capability="proddeploy" data-level="allowed">Allowed</span></td>
+                    <td><span class="governance__cell" data-tier="senior" data-capability="modeltune" data-level="restricted">Restricted</span></td>
+                  </tr>
+                  <tr>
+                    <td>Lead</td>
+                    <td><span class="governance__cell" data-tier="lead" data-capability="codegen" data-level="full">Full</span></td>
+                    <td><span class="governance__cell" data-tier="lead" data-capability="automerge" data-level="full">Full</span></td>
+                    <td><span class="governance__cell" data-tier="lead" data-capability="proddeploy" data-level="full">Full</span></td>
+                    <td><span class="governance__cell" data-tier="lead" data-capability="modeltune" data-level="full">Full</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="governance__panels">
+              <div class="governance__panel" data-panel="ip">
+                <button class="governance__panel-header" aria-expanded="false">
+                  <span>📋 IP Ownership</span>
+                </button>
+                <div class="governance__panel-content">
+                  All AI-generated code is owned by Yettel. Models trained on proprietary data remain company assets. Third-party model outputs require license review before production use.
+                </div>
+              </div>
+              <div class="governance__panel" data-panel="hallucination">
+                <button class="governance__panel-header" aria-expanded="false">
+                  <span>⚠️ Hallucination Risk</span>
+                </button>
+                <div class="governance__panel-content">
+                  Traffic light risk assessment: 🟢 Low risk for boilerplate/tests, 🟡 Medium risk for business logic, 🔴 High risk for security-critical code. All AI suggestions require human review before merge.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SLIDE 3 — Pillar 3: Strongest In-House AI Build
+         ======================================== -->
+    <section class="slide slide--p3" data-slide="3">
+      <header class="slide__header">
+        <span class="slide__pillar-number">03</span>
+        <h2 class="slide__title">Strongest In-House AI Build</h2>
+        <p class="slide__subtitle">Build vs. buy analysis, candidate evaluation, and 12-month implementation roadmap</p>
+      </header>
+
+      <p class="slide__exec-summary"><strong>Short-term:</strong> run a 2-month discovery sprint on the Dynamic Pricing Engine to validate data readiness and model architecture against Yettel's billing and usage datasets.<br><strong>Long-term:</strong> this is Yettel's most strategic internal build at €3.6M/yr value — own the pricing intelligence layer end-to-end so competitive advantage compounds with every quarter of customer behavior data collected.</p>
+
+      <div class="slide__content slide__stack">
+
+        <!-- TOP — Candidate Cards -->
+        <div class="slide__top">
+          <div class="candidates">
+            <div class="candidate-card" data-candidate="anomaly">
+              <div class="candidate-card__icon">🔍</div>
+              <h4 class="candidate-card__name">Network Anomaly Detection</h4>
+              <p class="candidate-card__desc">Real-time detection of network anomalies using proprietary telemetry data. Reduces MTTR and prevents outages.</p>
+              <div class="candidate-card__stats">
+                <span>Data Moat: <strong>High</strong></span>
+                <span>ROI: <strong>€4.2M/yr</strong></span>
+                <span>Complexity: <strong>Medium</strong></span>
+              </div>
+            </div>
+
+            <div class="candidate-card candidate-card--winner" data-candidate="pricing">
+              <div class="candidate-card__badge">★ RECOMMENDED</div>
+              <div class="candidate-card__icon">💰</div>
+              <h4 class="candidate-card__name">Dynamic Pricing Engine</h4>
+              <p class="candidate-card__desc">AI-driven price optimization across plans, bundles, and promotions using usage patterns and elasticity models.</p>
+              <div class="candidate-card__stats">
+                <span>Data Moat: <strong>Medium</strong></span>
+                <span>ROI: <strong>€3.6M/yr</strong></span>
+                <span>Complexity: <strong>High</strong></span>
+              </div>
+            </div>
+
+            <div class="candidate-card" data-candidate="clv">
+              <div class="candidate-card__icon">👤</div>
+              <h4 class="candidate-card__name">Customer Lifetime Value Model</h4>
+              <p class="candidate-card__desc">Predictive CLV scoring for targeted retention and upsell. Integrates with CRM for personalized engagement.</p>
+              <div class="candidate-card__stats">
+                <span>Data Moat: <strong>Low</strong></span>
+                <span>ROI: <strong>€3.1M/yr</strong></span>
+                <span>Complexity: <strong>Low</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM — Roadmap -->
+        <div class="slide__bottom">
+          <div class="roadmap">
+            <h3 class="roadmap__title">Dynamic Pricing Engine — 12-Month Build Roadmap</h3>
+
+            <div class="roadmap__timeline">
+              <div class="roadmap__month-markers">
+                <span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span>
+                <span>M7</span><span>M8</span><span>M9</span><span>M10</span><span>M11</span><span>M12</span>
+              </div>
+
+              <div class="roadmap__phases">
+                <div class="roadmap__phase" data-phase="discovery">
+                  <div class="roadmap__bar"></div>
+                  <span class="roadmap__phase-label">Discovery</span>
+                  <span class="roadmap__phase-months">M1–M2</span>
+                </div>
+
+                <div class="roadmap__phase" data-phase="mvp">
+                  <div class="roadmap__bar"></div>
+                  <span class="roadmap__phase-label">MVP</span>
+                  <span class="roadmap__phase-months">M3–M5</span>
+                </div>
+
+                <div class="roadmap__phase" data-phase="pilot">
+                  <div class="roadmap__bar"></div>
+                  <span class="roadmap__phase-label">Pilot</span>
+                  <span class="roadmap__phase-months">M6–M8</span>
+                </div>
+
+                <div class="roadmap__phase" data-phase="scale">
+                  <div class="roadmap__bar"></div>
+                  <span class="roadmap__phase-label">Scale</span>
+                  <span class="roadmap__phase-months">M9–M12</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap__detail" id="roadmap-detail">
+              <!-- JS will populate phase details on hover/click -->
+            </div>
+
+            <div class="roadmap__tco">
+              <div class="roadmap__tco-item">
+                <span class="roadmap__tco-label">Total Investment</span>
+                <span class="roadmap__tco-value">€1.2M</span>
+              </div>
+              <div class="roadmap__tco-item">
+                <span class="roadmap__tco-label">Projected Annual Value</span>
+                <span class="roadmap__tco-value">€3.6M</span>
+              </div>
+              <div class="roadmap__tco-item">
+                <span class="roadmap__tco-label">Payback Period</span>
+                <span class="roadmap__tco-value">14.0 months</span>
+              </div>
+              <div class="roadmap__tco-item">
+                <span class="roadmap__tco-label">3-Year ROI</span>
+                <span class="roadmap__tco-value">800%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SLIDE 4 — Pillar 4: Strongest Vendor/Partner Adoption
+         ======================================== -->
+    <section class="slide slide--p4" data-slide="4">
+      <header class="slide__header">
+        <span class="slide__pillar-number">04</span>
+        <h2 class="slide__title">Strongest Vendor/Partner Adoption</h2>
+        <p class="slide__subtitle">Vendor evaluation, procurement scorecard, and negotiation playbook</p>
+      </header>
+
+      <p class="slide__exec-summary"><strong>Short-term:</strong> procure Fraud Detection SaaS to stop revenue leakage within 6-8 weeks — this is commodity capability where speed-to-value beats internal build economics by 10x.<br><strong>Long-term:</strong> structure every vendor contract with 12-month exit windows and data portability clauses so Yettel retains optionality to in-source when internal ML capabilities mature.</p>
+
+      <div class="slide__content">
+
+        <!-- Vendor Cards -->
+        <div class="vendors">
+          <div class="vendor-card" data-vendor="scheduling">
+            <div class="vendor-card__icon">📅</div>
+            <h4 class="vendor-card__name">AI Field Workforce Scheduling</h4>
+            <p class="vendor-card__desc">Optimize technician dispatching, route planning, and SLA compliance using AI-driven scheduling.</p>
+            <div class="vendor-card__detail">
+              <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>ServiceMax (Salesforce-native, asset-centric) · OverIT (GIS + AR, telco-specific) · Zinier (no-code, AI-first)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>SaaS (all three), custom enterprise pricing</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€400K–600K/yr (licensing + integration)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>3–4 months (Zinier) to 6–12 months (ServiceMax)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>OverIT leads on GIS/AR for infrastructure-heavy field ops; Zinier leads on speed-to-deploy with no-code workflows</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>OverIT has strong CEE presence (Italian HQ). ServiceMax and Zinier rely on global SI partners for Hungary.</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Medium — requires integration with existing dispatch/ERP systems. Offline mobile capability critical for field crews.</span></div>
+            </div>
+          </div>
+
+          <div class="vendor-card vendor-card--winner open" data-vendor="fraud">
+            <div class="vendor-card__badge">★ RECOMMENDED</div>
+            <div class="vendor-card__icon">🛡️</div>
+            <h4 class="vendor-card__name">Fraud Detection SaaS</h4>
+            <p class="vendor-card__desc">Real-time fraud detection across SIM swap, subscription fraud, IRSF, and revenue assurance.</p>
+            <div class="vendor-card__detail">
+              <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Subex HyperSense (AI-first, end-to-end FMS) · Mobileum AIP (voice/roaming/signaling focus) · NVIDIA Morpheus (GPU-accelerated custom build)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>Subex/Mobileum: SaaS with per-subscriber licensing · Morpheus: on-prem GPU infrastructure</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€300K–500K/yr (SaaS) · €800K–1.2M/yr (Morpheus incl. GPU infra + ML team)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>6–8 weeks (Subex/Mobileum turnkey) · 4–6 months (Morpheus custom build)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>Subex leads with 200+ pre-built telecom fraud rules and closed-loop automation. Mobileum strongest on voice/roaming fraud. Morpheus only if building proprietary real-time engine.</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>Mobileum operates regional hubs with direct CEE support. Subex has European presence but relies on remote implementation.</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Recommendation</span><span>Subex HyperSense — fastest time-to-value, deepest telecom domain coverage, SaaS model avoids GPU capex. Reserve Morpheus as Year 2 option if Yettel builds internal ML team.</span></div>
+            </div>
+          </div>
+
+          <div class="vendor-card" data-vendor="documents">
+            <div class="vendor-card__icon">📄</div>
+            <h4 class="vendor-card__name">Document Intelligence</h4>
+            <p class="vendor-card__desc">AI-powered contract analysis, extraction, compliance checking, and document lifecycle management.</p>
+            <div class="vendor-card__detail">
+              <div class="vendor-card__row"><span class="vendor-card__label">Shortlisted Vendors</span><span>Tungsten Automation / Kofax (enterprise-grade, RPA integration) · ABBYY Vantage (best-in-class OCR, skill marketplace) · Sirion / Eigen (contract-focused, small-data AI)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Deployment Model</span><span>ABBYY: SaaS/on-prem/hybrid · Kofax: on-prem or cloud · Sirion: SaaS</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Est. Annual Cost</span><span>€150K–250K/yr (volume-based pricing, per page/document)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Implementation</span><span>4–6 weeks (ABBYY pre-built skills) to 6–12 weeks (Kofax custom workflows)</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Key Differentiator</span><span>ABBYY leads on OCR accuracy and multilingual support with human-in-the-loop learning. Kofax strongest for SAP-integrated, high-volume workflow orchestration.</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Regional Support</span><span>ABBYY has extensive dev/support centers in Eastern Europe (including Hungary/Serbia). Kofax has established enterprise partners in Budapest.</span></div>
+              <div class="vendor-card__row"><span class="vendor-card__label">Risk Assessment</span><span>Low — mature market, well-understood ROI. Main risk is over-customization during implementation leading to vendor lock-in.</span></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Negotiation Framework -->
+        <div class="negotiation">
+          <h3 class="negotiation__title">Negotiation Framework</h3>
+
+          <div class="negotiation__item open" data-clause="ip">
+            <div class="negotiation__header">
+              <span>📋 IP Ownership Clauses</span>
+            </div>
+            <div class="negotiation__content">
+              Yettel retains ownership of all models trained on proprietary data. Vendor provides model explainability documentation. Source code escrow required for critical dependencies. Audit rights for AI decision-making processes.
+            </div>
+          </div>
+
+          <div class="negotiation__item open" data-clause="data">
+            <div class="negotiation__header">
+              <span>🔐 Data-Sharing Terms</span>
+            </div>
+            <div class="negotiation__content">
+              Data residency within EU (GDPR compliance). No vendor use of Yettel data for model training without explicit consent. Data deletion upon contract termination within 30 days. Regular data access audits.
+            </div>
+          </div>
+
+          <div class="negotiation__item open" data-clause="exit">
+            <div class="negotiation__header">
+              <span>🚪 Exit &amp; Portability Clauses</span>
+            </div>
+            <div class="negotiation__content">
+              12-month maximum lock-in period. Full data export in standard formats within 60 days. Transition support for 6 months post-termination. No penalty for early exit after initial term. API compatibility guarantee for migration.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         SLIDE 5 — ROI Summary
+         ======================================== -->
+    <section class="slide slide--roi" data-slide="5">
+      <header class="slide__header">
+        <span class="slide__pillar-number">Σ</span>
+        <h2 class="slide__title">Investment &amp; Return Summary</h2>
+        <p class="slide__subtitle">Consolidated financial impact across all four strategic pillars</p>
+      </header>
+
+      <p class="slide__exec-summary">The four pillars generate €12.4M in annual value against a €3.7M total investment — a defensible 235% blended ROI with a blended payback of 11.5 months (including development and integration lead times). The strategy deliberately balances quick SaaS wins (fraud detection) with longer-term enterprise builds (pricing engine, automation flywheel) to ensure sustainable, realistic advantages without falling for vendor fairy tales.</p>
+
+      <div class="slide__content">
+        <h3 class="roi__title">Investment &amp; Return Summary</h3>
+
+        <div class="roi-cards">
+          <div class="roi-card" data-pillar="1">
+            <div class="roi-card__pillar-name">AI Customer Operations</div>
+            <div class="roi-card__investment roi-animate" data-value="1500000">€1.5M</div>
+            <div class="roi-card__label">Investment</div>
+            <div class="roi-card__annual-value roi-animate" data-value="4200000">€4.2M/yr</div>
+            <div class="roi-card__label">Annual Value</div>
+            <div class="roi-card__payback" data-value="4.3" data-format="months">4.3 months</div>
+            <div class="roi-card__label">Payback</div>
+          </div>
+
+          <div class="roi-card" data-pillar="2">
+            <div class="roi-card__pillar-name">Developer Productivity</div>
+            <div class="roi-card__investment roi-animate" data-value="600000">€600K</div>
+            <div class="roi-card__label">Investment</div>
+            <div class="roi-card__annual-value roi-animate" data-value="1800000">€1.8M/yr</div>
+            <div class="roi-card__label">Annual Value</div>
+            <div class="roi-card__payback" data-value="4.0" data-format="months">4.0 months</div>
+            <div class="roi-card__label">Payback</div>
+          </div>
+
+          <div class="roi-card" data-pillar="3">
+            <div class="roi-card__pillar-name">Dynamic Pricing Engine</div>
+            <div class="roi-card__investment roi-animate" data-value="1200000">€1.2M</div>
+            <div class="roi-card__label">Investment</div>
+            <div class="roi-card__annual-value roi-animate" data-value="3600000">€3.6M/yr</div>
+            <div class="roi-card__label">Annual Value</div>
+            <div class="roi-card__payback" data-value="14.0" data-format="months">14.0 months</div>
+            <div class="roi-card__label">Payback</div>
+          </div>
+
+          <div class="roi-card" data-pillar="4">
+            <div class="roi-card__pillar-name">Fraud Detection SaaS</div>
+            <div class="roi-card__investment roi-animate" data-value="400000">€400K/yr</div>
+            <div class="roi-card__label">Investment</div>
+            <div class="roi-card__annual-value roi-animate" data-value="2800000">€2.8M/yr</div>
+            <div class="roi-card__label">Annual Value</div>
+            <div class="roi-card__payback" data-value="1.7" data-format="months">1.7 months</div>
+            <div class="roi-card__label">Payback</div>
+          </div>
+        </div>
+
+        <div class="roi-totals">
+          <div class="roi-totals__item">
+            <span class="roi-totals__label">Total Investment</span>
+            <span class="roi-totals__value roi-animate" data-value="3700000">€3.7M</span>
+          </div>
+          <div class="roi-totals__item">
+            <span class="roi-totals__label">Total Annual Value</span>
+            <span class="roi-totals__value roi-animate" data-value="12400000">€12.4M/yr</span>
+          </div>
+          <div class="roi-totals__item">
+            <span class="roi-totals__label">Overall ROI</span>
+            <span class="roi-totals__value roi-animate" data-value="235" data-format="percent">235%</span>
+          </div>
+          <div class="roi-totals__item">
+            <span class="roi-totals__label">Blended Payback</span>
+            <span class="roi-totals__value roi-animate" data-value="11.5" data-format="months">11.5 months</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="nav" aria-label="Slide navigation">
+    <button class="nav__arrow nav__arrow--prev" aria-label="Previous slide">‹</button>
+
+    <div class="nav__progress">
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot active" data-target="0" aria-label="Go to slide 1">0</button>
+        <span class="nav__label">Intro</span>
+      </div>
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot" data-target="1" aria-label="Go to slide 2">1</button>
+        <span class="nav__label">Customer Ops</span>
+      </div>
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot" data-target="2" aria-label="Go to slide 3">2</button>
+        <span class="nav__label">Dev Productivity</span>
+      </div>
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot" data-target="3" aria-label="Go to slide 4">3</button>
+        <span class="nav__label">In-House AI</span>
+      </div>
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot" data-target="4" aria-label="Go to slide 5">4</button>
+        <span class="nav__label">Vendor/Partner</span>
+      </div>
+      <div class="nav__dot-wrapper">
+        <button class="nav__dot" data-target="5" aria-label="Go to slide 6">5</button>
+        <span class="nav__label">ROI Summary</span>
+      </div>
+    </div>
+
+    <button class="nav__arrow nav__arrow--next" aria-label="Next slide">›</button>
+  </nav>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
